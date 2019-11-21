@@ -20,6 +20,7 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 Plugin 'tpope/vim-surround' 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'wakatime/vim-wakatime'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -35,6 +36,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 map <C-n> :NERDTreeToggle<CR>
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 map <Leader> <Plug>(easymotion-prefix)
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++-4.8 -ulimit -Wall -Wno-unused-result -std=c++11   -O2   % -o %:r && ./%:r <CR>
 autocmd filetype c nnoremap <F5> :w <bar> !gcc -ulimit -Wall -Wno-unused-result  -O2 % -o %:r && ./%:r <CR>
@@ -51,7 +56,7 @@ set nu
 set clipboard=
 set autoindent
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=2
 set smarttab
 set expandtab
 set smartcase
